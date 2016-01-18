@@ -21,3 +21,4 @@
 - Calculate row number and use it in a loop insted of 200 line 555
 - create function anim with requestAnimationFrame inside and use it for animate scroll line 542 and 539
 - use gulp for minify css and js
+- Move dom query outside the loop where possible

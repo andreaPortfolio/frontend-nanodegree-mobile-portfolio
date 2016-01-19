@@ -1,13 +1,13 @@
-##Website Performance Optimization portfolio project
+## Website Performance Optimization portfolio project
 
-####To build this project
+#### To build this project
 
 1) Clone the repository
 2) You need to have nodejs and gulp installed
 3) In the main dir of the project write:
      npm install; gulp clean ; gulp
      
-####To view this project
+#### To view this project
 
 1) Open a browser
 2) If you use a web server open the main page on http://ipAddressOfYourServer/dist/ 
@@ -15,7 +15,7 @@
 
 
 
-####Part 1: Optimize PageSpeed Insights score for index.html
+#### Part 1: Optimize PageSpeed Insights score for index.html
 
 - Move al javascript at the and of body tag
 - Set preformatter.js async
@@ -29,7 +29,7 @@
 
 
 
-###Part 2: Optimize main.js for pizza.html
+### Part 2: Optimize main.js for pizza.html
 
 - Move document.body.scrollTop outside the loop line 507
 - Use translate3d css for improve performance line 522

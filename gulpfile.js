@@ -4,6 +4,29 @@ var gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css');
     htmlmin = require('gulp-htmlmin');
     critical = require('critical');
+const imagemin = require('gulp-imagemin');
+const pngquant = require('imagemin-pngquant');
+
+
+
+gulp.task('imagemin', function() {
+     gulp.src('src/img/*')
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}],
+      use: [pngquant()]
+    }))
+    .pipe(gulp.dest('dist/img/'));
+  gulp.src('src/view/images/*')
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}],
+      use: [pngquant()]
+    }))
+    .pipe(gulp.dest('dist/view/images/'));
+});
+
+
 
 gulp.task('uglifyJavascript', function(){
      gulp.src('src/js/*.js').pipe(uglify()).pipe(gulp.dest('dist/js/'));
@@ -60,4 +83,4 @@ gulp.task('watch', function(){
     gulp.watch('src/views/pizza.html', ['critical']);
 });
 
-gulp.task('default', ['uglifyJavascript', 'minifyCssStyle', 'critical', 'watch']);
+gulp.task('default', ['imagemin','uglifyJavascript', 'minifyCssStyle', 'critical',  'watch']);

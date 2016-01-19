@@ -17,13 +17,14 @@ gulp.task('imagemin', function() {
       use: [pngquant()]
     }))
     .pipe(gulp.dest('dist/img/'));
-  gulp.src('src/view/images/*')
+
+     gulp.src('src/views/images/*')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}],
       use: [pngquant()]
     }))
-    .pipe(gulp.dest('dist/view/images/'));
+    .pipe(gulp.dest('dist/views/images/'));
 });
 
 

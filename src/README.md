@@ -24,6 +24,7 @@
 - Use gulp with gulp-uglify, gulp-minify-css for optimize css and javascript
 - Use gulp with critical for insert in html file inline-css and minify html
 - Use gulp imagemin for optimize image file
+- Add media='print'
 
 
 
